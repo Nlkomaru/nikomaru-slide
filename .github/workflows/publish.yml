@@ -19,7 +19,7 @@ jobs:
 
       - name : Install dependencies
         run: |
-          yarn install
+          yarn -init -y && yarn
 
       - name: Build
         run: yarn workspaces foreach -A run publish
