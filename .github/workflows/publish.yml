@@ -16,10 +16,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-
-      - name : Init yarn
-        run: |
-          yarn init -y
           
       - name : Install dependency
         run: |
