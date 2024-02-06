@@ -19,7 +19,9 @@ jobs:
           cache: yarn
 
       - name : Install dependencies
-        run: yarn install
+        run: |
+          yarn init -y
+          yarn install
 
       - name: Build
         run: yarn workspaces foreach -A run publish
