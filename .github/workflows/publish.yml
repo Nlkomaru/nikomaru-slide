@@ -21,7 +21,7 @@ jobs:
         run: |
           yarn config set -H enableImmutableInstalls false
           yarn
-          cat ./package.json
+          ls ./node_modules
 
       - name: Build
         run: |
