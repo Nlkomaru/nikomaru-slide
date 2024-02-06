@@ -17,9 +17,12 @@ jobs:
         with:
           node-version: 20
 
-      - name : Install dependencies
+      - name : Init yarn
         run: |
           yarn init -y
+          
+      - name : Install dependency
+        run: |
           yarn install
 
       - name: Build
