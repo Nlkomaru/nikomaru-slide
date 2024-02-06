@@ -30,7 +30,7 @@ jobs:
       - name : Replace name
         run: |
           before="/export/slide"
-          after="/slide
+          after="/slide"
           find index.html | xargs sed -i 's/$before/$after/g'
 
       - name: Configure AWS credentials
