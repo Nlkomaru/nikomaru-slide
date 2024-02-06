@@ -31,6 +31,7 @@ jobs:
         run: |
           before="/export/slide"
           after="/slide"
+          cd /export
           find index.html | xargs sed -i 's/$before/$after/g'
 
       - name: Configure AWS credentials
