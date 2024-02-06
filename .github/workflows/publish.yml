@@ -30,6 +30,10 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-1
 
+      - name: Upload file to S3
+        env:
+          S3_UPLOAD_BUCKET: ${{ secrets.S3_UPLOAD_BUCKET }}
+
       - name: Build
         run: |
-          yarn workspaces foreach -A run build --base /$npm_package_name && aws s3 cp /dist s3://$S3_UPLOAD_BUCKET/$npm_package_name --recursive
+          yarn workspaces foreach -A run publish
