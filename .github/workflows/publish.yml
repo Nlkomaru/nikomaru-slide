@@ -25,6 +25,7 @@ jobs:
         run: |
           yarn config set -H enableImmutableInstalls false
           yarn
+          cat ./package.json
 
       - name: Build
         run: yarn workspaces foreach -A run publish
