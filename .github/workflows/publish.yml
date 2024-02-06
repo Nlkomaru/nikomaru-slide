@@ -34,4 +34,6 @@ jobs:
         env: 
           S3_UPLOAD_BUCKET: ${{ secrets.S3_BUCKET }}
         run: |
+          cd packages
+          find -name "package.json" | xargs sed 's/\S3_UPLOAD_BUCKET/$S3_UPLOAD_BUCKET/g'
           yarn workspaces foreach -A run publish
