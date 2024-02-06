@@ -32,4 +32,4 @@ jobs:
 
       - name: Build
         run: |
-          yarn workspaces foreach -A run publish
+          yarn workspaces foreach -A run build --base /$npm_package_name && aws s3 cp /dist s3://$S3_UPLOAD_BUCKET/$npm_package_name --recursive
