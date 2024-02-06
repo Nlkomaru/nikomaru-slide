@@ -19,7 +19,6 @@ jobs:
 
       - name : Install dependencies
         run: |
-          yarn init -y
           yarn install
 
       - name: Build
