@@ -3,7 +3,7 @@ name: Amazon S3 Sample
 on:
   push:
     branches:
-      - develop
+      - master
 
 jobs:
   build:
