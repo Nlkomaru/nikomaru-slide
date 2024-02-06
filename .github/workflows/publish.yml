@@ -23,7 +23,7 @@ jobs:
           
       - name : Install dependency
         run: |
-          yarn cache clean
+          yarn config set -H enableImmutableInstalls false
           yarn
 
       - name: Build
