@@ -24,7 +24,7 @@ jobs:
       - name : Install dependency
         run: |
           yarn cache clean
-          yarn install
+          yarn
 
       - name: Build
         run: yarn workspaces foreach -A run publish
