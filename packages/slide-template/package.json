@@ -1,12 +1,12 @@
 {
-  "name": "slide-slidev",
+  "name": "slide-template",
   "private": true,
   "version": "1.0.0",
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
     "export": "slidev export",
-    "publish": "slidev build --base /export/$npm_package_name"
+    "publish" : "slidev build --base /export/$npm_package_name"
   },
   "dependencies": {
     "@slidev/cli": "^0.47.3",
