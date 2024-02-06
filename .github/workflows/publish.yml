@@ -20,12 +20,12 @@ jobs:
       - name : Install dependency
         run: |
           yarn config set -H enableImmutableInstalls false
-          yarn
-          ls ./node_modules
+          yarn cache clean
+          yarn install
+          yarn cache clean
 
       - name: Build
         run: |
-          yarn workspaces foreach -A run install
           yarn workspaces foreach -A run publish
 
       - name : Replace name
