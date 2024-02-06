@@ -20,7 +20,8 @@ jobs:
         run: |
           corepack enable
           yarn set version stable
-          yarn install --immutable
+          config set -H enableImmutableInstalls false
+          yarn install
 
       - name: Build
         run: |
