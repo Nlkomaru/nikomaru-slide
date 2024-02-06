@@ -24,7 +24,9 @@ jobs:
           cat ./package.json
 
       - name: Build
-        run: yarn workspaces foreach -A run publish
+        run: |
+          yarn workspaces foreach -A run install
+          yarn workspaces foreach -A run publish
 
       - name : Replace name
         run: |
