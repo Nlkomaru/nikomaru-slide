@@ -6,7 +6,7 @@
     "build": "slidev build",
     "dev": "slidev --open",
     "export": "slidev export",
-    "publish": "slidev build --base /$npm_package_name && aws s3 cp ./packages/$npm_package_name/dist s3://$S3_UPLOAD_BUCKET/$npm_package_name --recursive"
+    "publish": "slidev build --base /$npm_package_name && ls && aws s3 cp ./packages/$npm_package_name/dist s3://$S3_UPLOAD_BUCKET/$npm_package_name --recursive"
   },
   "dependencies": {
     "@slidev/cli": "^0.47.3",
