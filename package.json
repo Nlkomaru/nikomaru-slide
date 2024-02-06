@@ -9,7 +9,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "packageManager": "yarn@4.1.0",
   "devDependencies": {
     "wrangler": "^3.26.0"
   }

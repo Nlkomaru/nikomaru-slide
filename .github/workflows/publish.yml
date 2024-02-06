@@ -15,24 +15,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          
+
       - name : Install dependency
         run: |
           corepack enable
           yarn set version stable
           yarn config set -H enableImmutableInstalls false
           yarn install
-
-      - name: Build
-        run: |
-          yarn workspaces foreach -A run publish
-
-      - name : Replace name
-        run: |
-          before="/export/slide"
-          after="/slide"
-          cd /export
-          find index.html | xargs sed -i 's/$before/$after/g'
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -41,9 +30,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-1
 
-      - name: Upload file to S3
-        env:
-          S3_UPLOAD_BUCKET: ${{ secrets.S3_UPLOAD_BUCKET }}
+      - name: Build
         run: |
-          ls /export
-          aws s3 cp /export s3://$S3_UPLOAD_BUCKET --recursive
+          yarn workspaces foreach -A run publish
