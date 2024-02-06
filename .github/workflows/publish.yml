@@ -23,6 +23,7 @@ jobs:
           
       - name : Install dependency
         run: |
+          yarn cache clean
           yarn install
 
       - name: Build
