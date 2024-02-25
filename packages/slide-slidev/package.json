@@ -13,6 +13,7 @@
     "@slidev/theme-apple-basic": "^0.25.0",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
+    "playwright-chromium": "^1.41.2",
     "vue": "^3.4.15"
   }
 }
