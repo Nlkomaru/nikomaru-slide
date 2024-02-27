@@ -23,7 +23,7 @@ SlidevをAWSにデプロイ
         -   マインクラフト
     -   📝 **資格取得**
         -   世界遺産検定 3級
-        -   AWS Certified Cloud Practitioner(Expiration 2025-01), EF, AP
+        -   AWS Certified Cloud Practitioner(Expiration 2025-01), FE, AP
 
 ---
 layout: default
