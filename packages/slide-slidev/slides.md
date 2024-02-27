@@ -3,9 +3,9 @@ theme: ../slidev-theme-modern
 download: true
 ---
 
-# Slidevをつかってみた
+# Gitを使ってスライドを管理しよう
 
-Gitを使ってスライドを管理しよう
+SlidevをAWSにデプロイ
 
 <div class="absolute bottom-10">
     にこまる
