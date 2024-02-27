@@ -3,7 +3,7 @@ theme: ../slidev-theme-modern
 download: true
 ---
 
-# Gitを使ってスライドを管理しよう
+# Gitを使ったスライド管理
 
 SlidevをAWSにデプロイ
 
