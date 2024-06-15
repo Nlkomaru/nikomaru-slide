@@ -3,9 +3,9 @@ theme: ../theme-modern
 download: true
 ---
 
-# Slidevをつかってみた
+# Gitを使ったスライド管理
 
-Gitを使ってスライドを管理しよう
+SlidevをAWSにデプロイ
 
 <div class="absolute bottom-10">
     にこまる
@@ -23,7 +23,7 @@ Gitを使ってスライドを管理しよう
         -   マインクラフト
     -   📝 **資格取得**
         -   世界遺産検定 3級
-        -   AWS Certified Cloud Practitioner(Expiration 2025-01), EF, AP
+        -   AWS Certified Cloud Practitioner(Expiration 2025-01), FE, AP
 
 ---
 layout: default

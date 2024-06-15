@@ -38,9 +38,17 @@ jobs:
         env:
           S3_ENDPOINT: ${{ secrets.S3_ENDPOINT }}
         run: |
-          aws s3 ls --endpoint-url http://localhost:4567
+          aws s3 ls --endpoint-url $S3_UPLOAD_BUCKET
           aws configure set s3.addressing_style virtual
-          
+
+      - name : Reset bucket
+        env:
+          S3_UPLOAD_BUCKET: ${{ secrets.S3_UPLOAD_BUCKET }}
+        run: |
+          aws s3 rm s3://$S3_UPLOAD_BUCKET --recursive
+
+      
+
       - name: Build
         env: 
           S3_UPLOAD_BUCKET: ${{ secrets.S3_UPLOAD_BUCKET }}
