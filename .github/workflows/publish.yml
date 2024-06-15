@@ -12,6 +12,8 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_EC2_METADATA_DISABLED: true
       AWS_REGION: auto
+      S3_UPLOAD_BUCKET: ${{ secrets.S3_UPLOAD_BUCKET }}
+      S3_ENDPOINT: ${{ secrets.S3_ENDPOINT }}
 
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -34,15 +36,10 @@ jobs:
           yarn install
 
       - name : Reset bucket
-        env:
-          S3_UPLOAD_BUCKET: ${{ secrets.S3_UPLOAD_BUCKET }}
         run: |
-          aws s3 rm s3://$S3_UPLOAD_BUCKET --recursive
+          aws s3 rm s3://$S3_UPLOAD_BUCKET --endpoint-url $S3_ENDPOINT_URL --recursive
 
       - name: Build
-        env: 
-          S3_UPLOAD_BUCKET: ${{ secrets.S3_UPLOAD_BUCKET }}
-          S3_ENDPOINT: ${{ secrets.S3_ENDPOINT }}
         run: |
           cd packages
           find -name "package.json" | xargs sed 's/\$S3_UPLOAD_BUCKET/$S3_UPLOAD_BUCKET/g'
