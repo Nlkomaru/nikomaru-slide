@@ -16,6 +16,10 @@ jobs:
         with:
           node-version: 20
 
+      - name : Remove template
+        run: |
+          rm -rf packages/template
+
       - name : Install dependency
         run: |
           corepack enable
@@ -29,6 +33,13 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-1
+
+      - name: Set s3 endpoint
+        env:
+          S3_ENDPOINT: ${{ secrets.S3_ENDPOINT }}
+        run: |
+          aws s3 ls --endpoint-url http://localhost:4567
+          aws configure set s3.addressing_style virtual
           
       - name: Build
         env: 
