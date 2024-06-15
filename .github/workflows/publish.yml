@@ -33,6 +33,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: auto
+          AWS_EC2_METADATA_DISABLED: true
 
 
       - name: Set s3 endpoint
