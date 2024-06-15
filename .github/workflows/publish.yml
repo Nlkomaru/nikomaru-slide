@@ -37,7 +37,7 @@ jobs:
 
       - name : Reset bucket
         run: |
-          aws s3 rm s3://$S3_UPLOAD_BUCKET --endpoint-url $S3_ENDPOINT_URL --recursive
+          aws s3 rm s3://$S3_UPLOAD_BUCKET --endpoint-url $S3_ENDPOINT --recursive
 
       - name: Build
         run: |
