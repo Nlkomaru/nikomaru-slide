@@ -45,7 +45,7 @@ OAuth2は、認可の仕組みを提供するプロトコル<br>
 googleカレンダーをほかのアプリケーションから利用する場合、<br>
 googleカレンダーのAPIを利用するためには、OAuth2を利用して認可を行う<br>
 
-<img height="70%" width="70%" src="static/oauth2.png" alt="a">
+<img height="70%" width="70%" src="/static/oauth2.png" alt="a">
 
 </div>
 
