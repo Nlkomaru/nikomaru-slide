@@ -58,7 +58,7 @@ layout: default
 
 ```md
 ---
-theme: ../slidev-theme-modern
+theme: ../theme-modern
 download: true
 ---
 
