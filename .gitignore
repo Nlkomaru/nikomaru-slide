@@ -5,8 +5,6 @@ node_modules/**
 
 .idea/**
 
-yarn.lock
-
 .yarn
 
 package-lock.json
