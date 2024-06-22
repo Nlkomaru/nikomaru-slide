@@ -31,7 +31,6 @@ jobs:
       - name : Install dependency
         run: |
           corepack enable
-          yarn global add @vue/cli
           yarn set version stable
           yarn config set -H enableImmutableInstalls false
           yarn install
