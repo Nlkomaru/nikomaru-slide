@@ -24,17 +24,16 @@ src: ../utils/self-introdoction.md
 
 # OAuth2とは
 
-<p>OAuth2とは ・・・ 認可の仕組み<br></p>
 OAuth2は、認可の仕組みを提供するプロトコル<br>
 
 <div  v-click class="p-2">
 
 ## 例
-googleカレンダーをほかのアプリケーションから利用する場合、<br>
 googleカレンダーのAPIを利用するためには、OAuth2を利用して認可を行う<br>
+</div>
 
-<img height="70%" width="70%" src="/static/oauth2.png" alt="a">
-
+<div  v-click class="p-3">
+<img height="45%" width="45%" src="/static/img.png" alt="a">
 </div>
 
 ---
@@ -52,38 +51,53 @@ googleカレンダーのAPIを利用するためには、OAuth2を利用して�
 
 # Kotlinについて
 
----
+JetBrains社が2011年にリリースしたプログラミング言語
 
-# 実際のコード
+## 特徴
+
+- Javaとの互換性が高い
+- 静的型付け言語 (null安全)
+- コードが簡潔
+- Android開発にも利用可能
+- Gradleを利用したビルドシステム
 
 ---
 
 # Ktorについて
 
+- Kotlin製のWebアプリケーションフレームワーク
+- JetBrains社が開発
+- 軽量
+- プラグインを利用して、機能を追加できる
+
+```kotlin
+fun main() {
+  embeddedServer(Netty, port = 8000) {
+    routing {
+      get ("/") {
+        call.respondText("Hello, world!")
+      }
+    }
+  }.start(wait = true)
+}
+```
+
 ---
 
 # フロントエンドについて
 
-<div>
-<div>
-
 ## 使用した技術
 
 - フレームワーク: Next.js
-- UIコンポーネント : Headless UI
+- ライブラリ
+    - 認証ライブラリ : [Auth.js](https://authjs.dev/)
     - UIライブラリ : [Ark ui](https://ark-ui.com/)
     - cssライブラリ : [Panda CSS](https://panda-css.com/)
     - コンポーネント : [Park UI](https://park-ui.com/)
 
-</div>
-<div v-click class="text-xl p-2" style="padding-top: 5%">
+<div v-click class="text-xl p-2">
 
 ## Headless UI
 
 スタイルを持たず、機能だけを提供
-
 </div>
-</div>
----
-
-# まとめ
