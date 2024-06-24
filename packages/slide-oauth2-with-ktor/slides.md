@@ -67,9 +67,8 @@ JetBrains社が2011年にリリースしたプログラミング言語
 
 - Kotlin製のWebアプリケーションフレームワーク
 - JetBrains社が開発
-- 軽量
-- プラグインを利用して、機能を追加できる
-
+- 軽量でプラグインを利用して、機能を追加できる
+````md magic-move
 ```kotlin
 fun main() {
   embeddedServer(Netty, port = 8000) {
@@ -81,6 +80,26 @@ fun main() {
   }.start(wait = true)
 }
 ```
+
+```kotlin {*|3-7,9,13}
+fun main() { 
+  embeddedServer(Netty, port = 8000) {
+    install(Authentication){
+        basic("auth-basic") {
+        // Configure basic authentication
+        }
+    }
+    routing {
+      authenticate("auth-basic") {
+        get ("/") {
+          call.respondText("Hello, world!")
+        }
+      }
+    }
+  }.start(wait = true)
+}
+```
+````
 
 ---
 
