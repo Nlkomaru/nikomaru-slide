@@ -1,5 +1,6 @@
 ---
 theme: ../theme-modern
+download: true
 ---
 
 # 認可サーバーを実装してみた
