@@ -35,21 +35,6 @@ jobs:
           yarn config set -H enableImmutableInstalls false
           yarn install
 
-      - name : Install dependencies
-        run: |
-          sudo apt update && sudo apt install -y \
-          language-pack-ja \
-          fontconfig \
-          fonts-noto-cjk \
-          && sudo rm -rf /var/lib/apt/lists/*
-
-      - name : Install font
-        env:
-          LANG: ja_JP:UTF-8
-        run: |
-          sudo fc-cache -fv && \
-          fc-list | grep IPA
-
       - name : Install Chrome
         run: |
           https://bootstrap.pypa.io/get-pip.py | python3 && \
