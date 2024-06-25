@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
+
 :root {
     /* default theme-modern color */
     /* can be overrided by uses `themeConfig` option */
@@ -5,7 +8,7 @@
 }
 
 
-.slidev-layout {
+slidev-layout {
     font-size: 1.5rem;
     h2 {
         padding-top: 1.5rem;
