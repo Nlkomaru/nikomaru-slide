@@ -30,7 +30,7 @@
         "highlighter": "all",
         "defaults": {
             "fonts": {
-                "sans": "Noto Sans Japanese",
+                "sans": "Noto Sans JP",
                 "mono": "Noto Sans Mono"
             }
         }

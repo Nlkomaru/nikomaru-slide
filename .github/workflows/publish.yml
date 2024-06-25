@@ -40,7 +40,6 @@ jobs:
           sudo apt update && sudo apt install -y \
           language-pack-ja \
           fontconfig \
-          fonts-ipafont \
           fonts-noto-cjk \
           && sudo rm -rf /var/lib/apt/lists/*
 
