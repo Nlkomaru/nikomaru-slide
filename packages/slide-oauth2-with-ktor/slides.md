@@ -5,7 +5,7 @@ download: true
 
 # 認可サーバーを実装してみた
 
-Kotlin + KtorでOAuth2を作ってみた
+Kotlin + KtorでOAuth 2.0 serverを作ってみた
 
 <div class="absolute bottom-10">
     にこまる
@@ -23,14 +23,14 @@ src: ../utils/self-introdoction.md
 
 ---
 
-# OAuth2とは
+# OAuth 2.0とは
 
-OAuth2は、認可の仕組みを提供するプロトコル [RFC 6749](https://datatracker.ietf.org/doc/html/rfc6749)<br>
+OAuth 2.0は、認可の仕組みを提供するプロトコル [RFC 6749](https://datatracker.ietf.org/doc/html/rfc6749)<br>
 
 <div  v-click class="p-2">
 
 ## 例
-googleカレンダーのAPIを利用するためには、OAuth2を利用して認可を行う<br>
+googleカレンダーのAPIを利用するためには、OAuthを利用して認可を行う<br>
 </div>
 
 <div  v-click class="p-3">
@@ -39,7 +39,7 @@ googleカレンダーのAPIを利用するためには、OAuth2を利用して�
 
 ---
 
-# OAuth2だと何がいい？
+# OAuthだと何がいい？
 
 - **セキュリティ**
     - パスワードを他のアプリケーションに渡さなくてもよい
