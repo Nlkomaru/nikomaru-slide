@@ -53,9 +53,10 @@ src: ../utils/self-introdoction.md
     - 監視とかほしいならHonoじゃなく、Effect tsを使ったほうがいい
 
 ---
+
 実際のコード
 
-```ts
+```typescript
 import { Hono } from 'hono'
 import { handle } from 'hono/vercel'
 import slideRouter from "@/src/app/api/[[...route]]/slideRoute";
@@ -69,7 +70,7 @@ app.route("/slide",slideRouter)
 export const GET = handle(app)
 ```
 
-```ts
+```typescript
 slideRouter.get("/list", async (c) => {
     let bucket = process.env.BUCKET
     if (!bucket) {

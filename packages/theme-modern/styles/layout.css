@@ -22,6 +22,9 @@ slidev-layout {
         padding-top: 1.5rem;
         font-size: 1.75rem;
     }
+    h1 {
+        @apply text-4xl mb-4 -ml-[0.05em];
+    }
 }
 
 
@@ -30,8 +33,9 @@ slidev-layout {
     @apply h-full grid;
 
     h1 {
-        @apply text-6xl leading-20;
+        @apply text-4xl leading-loose;
     }
+
 
     h1 + p {
         @apply -mt-2 opacity-50 mb-4;
@@ -40,5 +44,13 @@ slidev-layout {
 
     p + h2, ul + h2, table + h2 {
         @apply mt-10;
+    }
+}
+
+.slidev-layout.image {
+    @apply h-full flex items-center;
+
+    h1 {
+        @apply text-4xl leading-loose;
     }
 }
