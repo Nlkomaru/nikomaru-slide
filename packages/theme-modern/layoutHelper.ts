@@ -5,7 +5,11 @@ import type { CSSProperties } from 'vue'
  */
 export function resolveAssetUrl(url: string) {
     if (url.startsWith('/'))
-        return import.meta.env.BASE_URL + url.slice(1)
+        if (import.meta.env.BASE_URL.endsWith('/')) {
+            return import.meta.env.BASE_URL + url.slice(1)
+        }else{
+            return import.meta.env.BASE_URL + url
+        }
     return url
 }
 
